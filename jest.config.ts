@@ -7,4 +7,7 @@ export default {
   transform: {
     "ˆ.+\\.ts?$": ["@swc/jest"],
   },
+  moduleNameMapper: {
+    "@src/(.*)": "<rootDir>/src/$1",
+  },
 };

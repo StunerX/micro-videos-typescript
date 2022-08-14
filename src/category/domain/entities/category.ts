@@ -1,15 +1,15 @@
-import { v4 as uuid } from "uuid";
+import Id from "@src/@shared/domain/entities/value-objects/id";
 import { CreateCategoryEntityPayload } from "./type/create-category-entity-payload";
 
 export default class Category {
-  private readonly _id: string;
+  private readonly _id: Id;
   private _name: string;
   private _description: string;
   private _is_active: boolean;
   private _created_at: Date;
 
   constructor(payload: CreateCategoryEntityPayload) {
-    this._id = payload.id ?? uuid();
+    this._id = new Id(payload.id);
     this._name = payload.name;
     this._description = payload.description;
     this._is_active = payload.is_active ?? true;
@@ -19,7 +19,7 @@ export default class Category {
   }
 
   get id(): string {
-    return this._id;
+    return this._id.value;
   }
 
   get name(): string {
