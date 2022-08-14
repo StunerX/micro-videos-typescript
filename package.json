@@ -4,15 +4,20 @@
   "description": "admin do catalogo de videos",
   "main": "index.js",
   "scripts": {
+    "test": "jest --passWithNoTests --runInBand --bail",
     "ts-node": "ts-node",
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@swc/core": "^1.2.231",
+    "@swc/jest": "^0.2.22",
+    "@types/jest": "^28.1.6",
     "@types/node": "^14.14.31",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.7",
     "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   }
