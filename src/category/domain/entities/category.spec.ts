@@ -1,3 +1,4 @@
+import InvalidIdError from "@src/@shared/errors/invalid-id.error";
 import Category from "./category";
 
 describe("Category unit test", () => {
